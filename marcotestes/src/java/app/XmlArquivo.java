@@ -29,13 +29,13 @@ public class XmlArquivo {
     
     public static void main(String[] args) throws ParserConfigurationException, TransformerException, SAXException, IOException {
         
-        //lerXml();
-        criarXml();
+        lerXml();
+        //criarXml();
         
         }        
         
         public static void lerXml() throws FileNotFoundException, ParserConfigurationException, SAXException, IOException{
-           File arquivo = new File("D:\\senac\\agenda.xml");
+           File arquivo = new File("D:\\senac\\avicenaPreenchido.xml");
            FileInputStream arquivoXml = new FileInputStream(arquivo);
 
            DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
