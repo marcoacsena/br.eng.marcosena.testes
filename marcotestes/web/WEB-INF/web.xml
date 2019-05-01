@@ -4,9 +4,33 @@
         <servlet-name>validarformulario</servlet-name>
         <servlet-class>servlets.validarformulario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Autenticar</servlet-name>
+        <servlet-class>servlets.Autenticar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AreaDaComunidadeJava</servlet-name>
+        <servlet-class>servlets.AreaDaComunidadeJava</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Sair</servlet-name>
+        <servlet-class>servlets.Sair</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>validarformulario</servlet-name>
         <url-pattern>/validarformulario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Autenticar</servlet-name>
+        <url-pattern>/autenticar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AreaDaComunidadeJava</servlet-name>
+        <url-pattern>/areadacomunidadejava</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Sair</servlet-name>
+        <url-pattern>/sair</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
