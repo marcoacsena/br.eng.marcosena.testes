@@ -16,6 +16,10 @@
         <servlet-name>Sair</servlet-name>
         <servlet-class>servlets.Sair</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ClientePessoa</servlet-name>
+        <servlet-class>servlets.ServletServicoPessoa</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>validarformulario</servlet-name>
         <url-pattern>/validarformulario</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>Sair</servlet-name>
         <url-pattern>/sair</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientePessoa</servlet-name>
+        <url-pattern>/servletservicopessoa</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
