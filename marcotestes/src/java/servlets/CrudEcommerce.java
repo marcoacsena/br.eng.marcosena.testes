@@ -87,11 +87,11 @@ public class CrudEcommerce extends HttpServlet {
                             request.setAttribute("login", usuario.getLogin());
                             request.setAttribute("senha", usuario.getSenha());
                             request.getRequestDispatcher("WEB-INF/EcommerceValidado.jsp").forward(request, response);
-                        }else{request.getRequestDispatcher("login.jsp").forward(request, response);}
+                        }else{request.getRequestDispatcher("Login.jsp").forward(request, response);}
 
                         break;
                     default:
-                        request.getRequestDispatcher("login.jsp").forward(request, response);
+                        request.getRequestDispatcher("Login.jsp").forward(request, response);
                         break;
 
                 }
