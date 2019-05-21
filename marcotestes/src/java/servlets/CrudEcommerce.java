@@ -1,9 +1,8 @@
 package servlets;
 
-import controle.DAO.UsuarioDao;
+import controle.BO.UsuarioBo;
 import controle.VO.Usuario;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -31,7 +30,7 @@ public class CrudEcommerce extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         String var1 = request.getParameter("cadastrar");
-        String var2 = request.getParameter("excluir");
+        String var2 = request.getParameter("validar");
         //String cpf = request.getParameter("cpfpaciente");
 
         //System.out.println("O cpf é: " + cpf);
@@ -42,6 +41,7 @@ public class CrudEcommerce extends HttpServlet {
         System.out.println("O array é: " + variavel);
 
         Usuario usuario = null;
+        UsuarioBo usuarioBo = null;
 
         for (int i = 0; i < variavel.size(); i++) {
             String var = variavel.get(i);
@@ -53,40 +53,45 @@ public class CrudEcommerce extends HttpServlet {
                      //   System.out.println("A variável é: " + variavel.get(i));
                         usuario = new Usuario();
                         usuario.setLogin(request.getParameter("login"));
-                        usuario.setSenha(request.getParameter("senha"));                        
+                        usuario.setSenha(request.getParameter("senha"));                 
 
-                        System.out.println(usuario);
-
-                        UsuarioDao usuarioDao= new UsuarioDao();
-
-                        int novoId = usuarioDao.cadastrarUsuario(usuario);
+                        usuarioBo= new UsuarioBo();
+                        int novoId = 0;
+                        novoId = usuarioBo.cadastrarUsuario(usuario);
 
                         if (novoId > 0) {
-
 //                            request.setAttribute("codigousario", novoId);
 //                            request.setAttribute("codigoseguranca", );
 //                            request.setAttribute("datavalidade", );
 //                            request.setAttribute("login", );
 //                            request.setAttribute("numerocartao", );
 //                            request.setAttribute("senha", );
+
+                              
                             
                            //request.getRequestDispatcher("Paciente/MostrarPacienteCadastrado.jsp").forward(request, response);
-                            System.out.println("O identificador do novo usuário é: " +novoId);
-                        }
+                            System.out.println("O novo Id é: " +novoId);
+                        } else {System.out.println("Já existe um usuário com o mesmo nome e/ou senha. Tente outro nome!");}
                         break;
 
-//                    case "validar":
-//                       
-//                        
-//                        if (pacienteController.excluirPacientePorCpf(pacienteVO.getCpfPaciente())) {
-//
-//                            request.setAttribute("cpfpaciente", pacienteVO.getCpfPaciente());
-//                            request.getRequestDispatcher("Paciente/MostrarPacienteExcluido.jsp").forward(request, response);
-//                        }
-//
-//                        break;
+                    case "validar":                       
+                        usuario = new Usuario();
+                        usuario.setLogin(request.getParameter("login"));
+                        usuario.setSenha(request.getParameter("senha"));
+                        
+                        usuarioBo= new UsuarioBo();
+                        Usuario usuarioValidado = usuarioBo.validarUsuario(usuario);
+                        System.out.println("O usuário é: " +usuarioValidado);
+                        if (usuarioValidado != null) {
+                            System.out.println(usuario);
+                            request.setAttribute("login", usuario.getLogin());
+                            request.setAttribute("senha", usuario.getSenha());
+                            request.getRequestDispatcher("WEB-INF/EcommerceValidado.jsp").forward(request, response);
+                        }else{request.getRequestDispatcher("login.jsp").forward(request, response);}
+
+                        break;
                     default:
-                        request.getRequestDispatcher("crud").forward(request, response);
+                        request.getRequestDispatcher("login.jsp").forward(request, response);
                         break;
 
                 }

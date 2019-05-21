@@ -1,6 +1,6 @@
 <%-- 
-    Document   : MarLuEcommerce
-    Created on : 20/05/2019, 13:10:33
+    Document   : EcommerceValidado
+    Created on : 21/05/2019, 14:17:25
     Author     : 80119050
 --%>
 
@@ -14,13 +14,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <script>
-    function alertaDeCompra() {
-      
-        alert("Para realizar uma compra, você precisa fazer login! Para isso, clique no botão 'Fazer Login' à direita da tela!");
-       
-      }    
-  </script>
   
   <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
@@ -63,7 +56,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#" onclick="alertaDeCompra()">Comprar</a></li>
+        <li><a href="#">Comprar</a></li>
         <li><a href="#">Compromisso</a></li>
         <li><a href="#">Contato</a></li>
       </ul>
@@ -137,4 +130,3 @@
 
 </body>
 </html>
-

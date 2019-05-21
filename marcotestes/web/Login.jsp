@@ -28,7 +28,7 @@
     <div class="container">
         <h2>Loja Digital LuMar!</h2>
         <p> Entre com o login e senha para comprar à vontade!</P>
-        <form class="was-validated">
+        <form class="was-validated" action="crudecommerce" method="post">
             <div class="form-group">
                 <label for="nome">Login:</label>
                 <input type="text" class="form-control" id="login" placeholder="Digite seu login" name="login" required>
@@ -37,14 +37,14 @@
             </div>
             <div class="form-group">
                 <label for="pwd">Senha:</label>
-                <input type="password" class="form-control" id="sena" placeholder="Digite sua senha" name="sena" required>
+                <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" name="senha" required>
                 <div class="valid-feedback">Campo preenchido. Ok!</div>
                 <div class="invalid-feedback">Esse campo é obrigatório.</div>
                 <small id="senha" class="form-text text-muted">Nunca compartilhe a sua senha!</small>
 
             </div>
-            
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <input type="hidden" id="validar" name="validar" value="validar">
+            <button type="submit" class="btn btn-primary">Acessar</button>
             
             <div class="form-group form-check" style =" float: top">
                 <label class="form-check-label">
