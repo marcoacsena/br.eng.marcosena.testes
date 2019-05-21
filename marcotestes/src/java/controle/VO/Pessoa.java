@@ -1,5 +1,5 @@
 
-package model.VO;
+package controle.VO;
 
 public class Pessoa {
     

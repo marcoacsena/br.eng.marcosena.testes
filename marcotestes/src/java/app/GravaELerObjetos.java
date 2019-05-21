@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import model.VO.Cliente;
+import controle.VO.Cliente;
 
 public class GravaELerObjetos {
 

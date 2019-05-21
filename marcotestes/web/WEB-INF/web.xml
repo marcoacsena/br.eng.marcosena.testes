@@ -20,6 +20,10 @@
         <servlet-name>ClientePessoa</servlet-name>
         <servlet-class>servlets.ServletServicoPessoa</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CrudEcommerce</servlet-name>
+        <servlet-class>servlets.CrudEcommerce</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>validarformulario</servlet-name>
         <url-pattern>/validarformulario</url-pattern>
@@ -43,6 +47,10 @@
     <welcome-file-list>
         <welcome-file>LuMarEcommerce.jsp</welcome-file>
     </welcome-file-list>
+    <servlet-mapping>
+        <servlet-name>CrudEcommerce</servlet-name>
+        <url-pattern>/crudecommerce</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import model.VO.Pessoa;
+import controle.VO.Pessoa;
 
 public class SerializacaoObjectJsonObject {
 

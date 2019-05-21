@@ -14,6 +14,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+    function alertaDeCompra() {
+      
+        alert("Para realizar uma compra, você precisa fazer login!");
+       
+      }    
+  </script>
+  
   <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
     .navbar {
@@ -30,7 +38,7 @@
     /* Add a gray background color and some padding to the footer */
     footer {
       background-color: #f2f2f2;
-      padding: 35px;
+      padding: 25px;
     }
   </style>
 </head>
@@ -38,7 +46,7 @@
 
 <div class="jumbotron">
   <div class="container text-center">
-    <h2>Loja Digital LuMar - A melhor da Internet</h2>      
+    <h2>Digital LuMar - Confira os produtos oferecidos pela melhor loja da Internet</h2>      
   </div>
 </div>
 
@@ -55,7 +63,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Produtos</a></li>
+        <li><a href="#" onclick="alertaDeCompra()">Comprar</a></li>
         <li><a href="#">Compromisso</a></li>
         <li><a href="#">Contato</a></li>
       </ul>
@@ -105,25 +113,25 @@
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Micro Msena</div>
-        <div class="panel-body"><img src="micro.jpg" class="img-responsive" style="width:90%" alt="Image"></div>
+        <div class="panel-body"><img src="micro.jpg" class="img-responsive" style="width:88%" alt="Image"></div>
         <div class="panel-footer">Micro Msena 555 top de linha!</div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Tablete Lbenetti</div>
-        <div class="panel-body"><img src="tablet.jpg" class="img-responsive" style="width:55%" alt="Image"></div>
+        <div class="panel-body"><img src="tablet.jpg" class="img-responsive" style="width:54%" alt="Image"></div>
         <div class="panel-footer">Tablete Lb 2106 com 1TB de SRAM!</div>
       </div>
     </div>
   </div>
 </div><br><br>
 
-<footer class="container-fluid text-center">
-  <p>Loja Digital LuMar: &copy; Desenvolvido por Luciane Benetti e Marco Sena.</p>  
+<footer class="container-fluid text-center">    
   <form class="form-inline">Obter ofertas:
-    <input type="email" class="form-control" size="50" placeholder="email">
-    <button type="button" class="btn btn-danger">Inscreva-se!</button>
+    <input type="email" class="form-control" size="60" placeholder="Digite seu email">
+    <button type="button" class="btn btn-danger">Inscreva-se!</button><br><br>
+    &copy; Desenvolvido por Luciane Benetti e Marco Sena.
   </form>
 </footer>
 
