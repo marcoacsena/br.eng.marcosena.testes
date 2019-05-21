@@ -17,7 +17,7 @@
   <script>
     function alertaDeCompra() {
       
-        alert("Para realizar uma compra, você precisa fazer login!");
+        alert("Para realizar uma compra, você precisa fazer login! Para isso, clique no botão 'Fazer Login' à direita da tela!");
        
       }    
   </script>
